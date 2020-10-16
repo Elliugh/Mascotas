@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.guillermo.mascotas">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.guillermo.mascotas">
 
     <application
         android:allowBackup="true"
@@ -9,14 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Favoritas"
-            android:theme="@style/AppThemeWithActionBar">
+        <activity android:name=".ListaMascotas"
+            android:parentActivityName=".MainActivity"
+            tools:ignore="Instantiatable">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity">
             </meta-data>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            tools:ignore="Instantiatable">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
